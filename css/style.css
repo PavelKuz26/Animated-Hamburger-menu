@@ -1,0 +1,469 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(137deg, rgba(2,0,36,1) 0%, rgba(6,6,240,1) 19%, rgba(0,212,255,1) 54%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper .icon{
+    margin:20px;
+}
+.nav-icon-1{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    transition: .1s;
+    cursor: pointer;
+    display: inline-block;
+}
+.nav-icon-1 span{
+    position: absolute;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.nav-icon-1:hover span{
+    transform: scale(1.2);
+    transition: 350ms cubic-bezier(.8, .5, .2, 1.4);
+}
+.nav-icon-1 span:nth-child(1){
+    left: 0;
+    top: 0;
+  }
+  .nav-icon-1 span:nth-child(2){
+    left: 12px;
+    top: 0;
+  }
+  .nav-icon-1 span:nth-child(3){
+    right: 0;
+    top: 0;
+  }
+  .nav-icon-1 span:nth-child(4){
+    left: 0;
+    top: 12px;
+  }
+  .nav-icon-1 span:nth-child(5){
+    position: absolute;
+    left: 12px;
+    top: 12px;
+  }
+  .nav-icon-1 span:nth-child(6){
+    right: 0px;
+    top: 12px;
+  }
+  .nav-icon-1 span:nth-child(7){
+    left: 0px;
+    bottom: 0px;
+  }
+  .nav-icon-1 span:nth-child(8){
+    position: absolute;
+    left: 12px;
+    bottom: 0px;
+  }
+  .nav-icon-1 span:nth-child(9){
+    right: 0px;
+    bottom: 0px;
+  }
+.nav-icon-1.open{
+    transform: rotate(180deg);
+    cursor: pointer;
+    transition: .2s cubic-bezier(.8, .5, .2, 1.4);
+}
+.nav-icon-1.open span{
+    border-radius: 50%;
+    transition-delay: 200ms;
+    transition: .5s cubic-bezier(.8, .5, .2, 1.4);
+}
+.nav-icon-1.open span:nth-child(2) {
+    left: 6px;
+    top: 6px;
+  }
+  .nav-icon-1.open span:nth-child(4) {
+    left: 6px;
+    top: 18px;
+  }
+  .nav-icon-1.open span:nth-child(6) {
+    right: 6px;
+    top: 6px;
+  }
+  .nav-icon-1.open span:nth-child(8) {
+    left: 18px;
+    bottom: 6px;
+  }
+/* icon 2  */
+.nav-icon-2{
+    position: relative;
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+}
+.nav-icon-2 span{
+    position: absolute;
+    height: 4px;
+    border-radius: 2px;
+    background: #fff;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+}
+.nav-icon-2 span:nth-child(1){
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.nav-icon-2 span:nth-child(2){
+    width: 100%;
+    top: 14px;
+    left: 0;
+    display: block;
+}
+.nav-icon-2 span:nth-child(3){
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: block;
+}
+.nav-icon-2:not(.open):hover span:nth-child(1){
+    top: -2px;
+    left: 0px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+}
+.nav-icon-2:not(.open):hover span:nth-child(3){
+    bottom: -2px;
+    left: 0px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+}
+.nav-icon-2.open span:nth-child(1){
+    transform: rotate(90deg);
+    top: 12px;
+    left: 3px;
+}
+.nav-icon-2.open span:nth-child(2){
+    width: 20px;
+    transform: rotate(45deg);
+    top: 20px;
+    left: 3px;
+}
+.nav-icon-2.open span:nth-child(3){
+    width: 20px;
+    transform: rotate(-45deg);
+    left:16px;
+    top: 20px;
+}
+/* icon 3 */
+.nav-icon-3{
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 33px;
+    cursor: pointer;
+}
+.nav-icon-3 span{
+    position: absolute;
+    display: block;
+    height: 4px;
+    border-radius: 2px;
+    background: #fff;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+}
+.nav-icon-3 span:nth-child(1){
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.nav-icon-3 span:nth-child(2){
+    width: 100%;
+    left: 0;
+    top: 14px;
+}
+.nav-icon-3 span:nth-child(3){
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+.nav-icon-3.open{
+    transform: rotate(-90deg);
+}
+.nav-icon-3.open span:nth-child(1){
+    left:3px;
+    top: 12px;
+    width: 30px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+    transform: rotate(90deg);
+}
+.nav-icon-3.open span:nth-child(2){
+        left:2px;
+        top: 20px;
+        width: 20px;
+        transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+        transform: rotate(45deg);
+        transition-delay: 50ms;
+}
+.nav-icon-3.open span:nth-child(3){
+    width: 20px;
+    transform: rotate(-45deg);
+    left:14px;
+    top: 20px;
+}
+/* icon 4 */
+.nav-icon-4{
+    position: relative;
+    display: inline-block;
+    height: 33px;
+    width: 33px;
+    cursor: pointer;
+}
+.nav-icon-4 span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    background: #fff;
+    height: 4px;
+    border-radius: 2px;
+}
+.nav-icon-4 span:nth-child(1){
+    top: 0;
+    left: 0;
+}
+.nav-icon-4 span:nth-child(2){
+    left: 0;
+    top: 14px;
+}
+.nav-icon-4 span:nth-child(3){
+    bottom: 0;
+    left: 0;
+}
+.nav-icon-4:not(.open):hover span:nth-child(1){
+    transform: rotate(-4deg) scaleY(1.1);
+}
+.nav-icon-4:not(.open):hover span:nth-child(2){
+    transform: rotate(4deg) scaleY(1.1);
+} 
+.nav-icon-4:not(.open):hover span:nth-child(3){
+    transform: rotate(-4deg) scaleY(1.1);
+}
+.nav-icon-4.open{
+    transform: rotate(90deg);
+}
+.nav-icon-4.open span:nth-child(1){
+    left:3px;
+    top: 12px;
+    width: 30px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+    transform: rotate(90deg);
+}
+.nav-icon-4.open span:nth-child(2){
+        left:2px;
+        top: 20px;
+        width: 20px;
+        transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+        transform: rotate(45deg);
+        transition-delay: 50ms;
+}
+.nav-icon-4.open span:nth-child(3){
+    width: 20px;
+    transform: rotate(-45deg);
+    left:14px;
+    top: 20px;
+}
+/* icon 5 */
+.nav-icon-5{
+    position: relative;
+    display: inline-block;
+    height: 33px;
+    width: 33px;
+    cursor: pointer;
+}
+.nav-icon-5 span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    background: #fff;
+    height: 4px;
+    border-radius: 2px;
+}
+.nav-icon-5 span:nth-child(1){
+    top: 0;
+    left: 0;
+}
+.nav-icon-5 span:nth-child(2){
+    left: 0;
+    top: 14px;
+}
+.nav-icon-5 span:nth-child(3){
+    bottom: 0;
+    left: 0;
+}
+.nav-icon-5:not(.open):hover span:nth-child(1){
+    transform: rotate(4deg) scaleY(1.1);
+}
+.nav-icon-5:not(.open):hover span:nth-child(2){
+    transform: rotate(-4deg) scaleY(1.1);
+} 
+.nav-icon-5:not(.open):hover span:nth-child(3){
+    transform: rotate(4deg) scaleY(1.1);
+}
+.nav-icon-5.open span:nth-child(1){
+    transform: rotate(45deg);
+    top: 14px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+}
+.nav-icon-5.open span:nth-child(2){
+    opacity: 0;
+}
+.nav-icon-5.open span:nth-child(3){
+    transform: rotate(-45deg);
+    top: 14px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+}
+/* icon 6 */
+.nav-icon-6{
+    position: relative;
+    display: inline-block;
+    height: 33px;
+    width: 33px;
+    cursor: pointer;
+}
+.nav-icon-6 span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    background: #fff;
+    height: 4px;
+    border-radius: 2px;
+    transition: .2s;
+}
+.nav-icon-6 span:nth-child(1){
+    top: 0;
+    left: 0;
+}
+.nav-icon-6 span:nth-child(2){
+    left: 0;
+    top: 14px;
+}
+.nav-icon-6 span:nth-child(3){
+    bottom: 0;
+    left: 0;
+}
+.nav-icon-6:not(.open):hover span:nth-child(1){
+    transform: scaleY(1.2);
+    left: -6px;
+}
+.nav-icon-6:not(.open):hover span:nth-child(2){
+    transform: rotate(-4deg);
+}
+.nav-icon-6:not(.open):hover span:nth-child(3){
+    transform: scaleY(1.2);
+    left: 6px;
+}
+.nav-icon-6.open span:nth-child(1){
+    transform: rotate(45deg);
+    top: 14px;
+    left: -13px;
+}
+.nav-icon-6.open span:nth-child(2){
+    opacity: 0;
+}
+.nav-icon-6.open span:nth-child(3){
+    transform: rotate(-45deg);
+    top: 14px;
+    left: 8px;
+}
+/* icon 7 */
+.nav-icon-7{
+    position: relative;
+    display: inline-block;
+    height: 33px;
+    width: 33px;
+    cursor: pointer;
+}
+.nav-icon-7 span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    background: #fff;
+    height: 4px;
+    border-radius: 2px;
+    transition: .2s;
+}
+.nav-icon-7 span:nth-child(1){
+    top: 0;
+    left: 0;
+}
+.nav-icon-7 span:nth-child(2){
+    left: 0;
+    top: 14px;
+}
+.nav-icon-7 span:nth-child(3){
+    bottom: 0;
+    left: 0;
+}
+.nav-icon-7:not(open):hover :nth-child(1),
+.nav-icon-7:not(open):hover :nth-child(3)
+{
+    transform: scaleX(.8);
+}
+.nav-icon-7:not(open):hover :nth-child(2){
+    transform: scaleX(.5);
+}
+.nav-icon-7.open span:nth-child(1){
+    transform: rotate(90deg);
+    top: 14px;
+}
+.nav-icon-7.open span:nth-child(2){
+    opacity: 0;
+}
+.nav-icon-7.open span:nth-child(3){
+    top: 14px;
+}
+/* icon 8 */
+.nav-icon-8{
+    position: relative;
+    display: inline-block;
+    height: 33px;
+    width: 33px;
+    cursor: pointer;
+}
+.nav-icon-8 span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    background: #fff;
+    height: 4px;
+    border-radius: 2px;
+    transition: .2s;
+}
+.nav-icon-8 span:nth-child(1){
+    top: 0;
+    left: 0;
+}
+.nav-icon-8 span:nth-child(2){
+    left: 0;
+    top: 14px;
+}
+.nav-icon-8 span:nth-child(3){
+    bottom: 0;
+    left: 0;
+}
+.nav-icon-8:not(open):hover :nth-child(1),
+.nav-icon-8:not(open):hover :nth-child(3)
+{
+    transform: scaleX(.8);
+}
+.nav-icon-8:not(open):hover :nth-child(2){
+    transform: scaleX(.5);
+}
+.nav-icon-8.open span:nth-child(1),
+.nav-icon-8.open span:nth-child(2),
+.nav-icon-8.open span:nth-child(3)
+{
+    top: 14px;
+}
